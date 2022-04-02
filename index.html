@@ -12,19 +12,34 @@
 </head>
 
 <body>
-    <div class="px-4 bg-slate-300">
-    <h1 class="text-3xl font-bold underline text-green-700">
-        State Share Dashboard
-    </h1>
-    <div x-data="{ open: false }">
-        <button @click="open = true">Click to Expand</button>
+    <div class="flex">
+        <div class="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-gray-800 text-white shadow-lg">
+            <div class="sidebar-icon">
+                <i data-feather="user-check"></i>
+            </div>
+            <div class="sidebar-icon">
+                <i data-feather="phone-call"></i>
+            </div>
+            <div class="sidebar-icon">
+                <i data-feather="headphones"></i>
+            </div>
+            <div class="sidebar-icon">
+                <i data-feather="pen-tool"></i>
+            </div>
+            <div class="sidebar-icon">
+                <i data-feather="radio"></i>
+            </div>
+            <div class="sidebar-icon">
+                <i data-feather="user-x"></i>
+            </div>
+            <hr class="sidebar-hr" />
+            <div class="sidebar-icon">
+                <i data-feather="inbox"></i>
+            </div>
+        </div>
 
-        <span x-show="open">
-            Content...
-        </span>
-        <i data-feather="feather"></i>
     </div>
-</div>
+
 </body>
 <script>
     feather.replace()
