@@ -13,11 +13,10 @@
 
 <body>
     <div class="flex">
-
         <div class="content-container">
             <div class="top-navigation">
 
-                    <button x-data="{
+                <button x-data="{
                     toggle: () => {
                         if (localStorage.theme === 'dark') {
                             localStorage.theme = 'light';
@@ -28,72 +27,82 @@
                         }
                     },
                 }" class="mt-2 px-3 py-2 bg-pink-400 rounded-lg font-semibold text-white focus:outline-none"
-                        @click="toggle">
-                        <i data-feather="moon"></i>
-                    </button>
-
-
-                </div>
-
+                    @click="toggle">
+                    <i data-feather="moon"></i>
+                </button>
             </div>
-
-
-            <div
-                class="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-white dark:bg-gray-900 text-white shadow-lg">
-                <div class="sidebar-icon group current-status">
-                    <i data-feather="user-check"></i>
-                </div>
-                <hr class="sidebar-hr" />
-                <div class="sidebar-icon group">
-                    <i data-feather="user-check"></i>
-                    <span class="sidebar-caption group-hover:scale-100">
-                        Available
-                    </span>
-                </div>
-                <div class="sidebar-icon group">
-                    <i data-feather="phone-call"></i>
-                    <span class="sidebar-caption group-hover:scale-100">
-                        Next up
-                    </span>
-                </div>
-                <div class="sidebar-icon group">
-                    <i data-feather="headphones"></i>
-                    <span class="sidebar-caption group-hover:scale-100">
-                        On call
-                    </span>
-                </div>
-                <div class="sidebar-icon group">
-                    <i data-feather="pen-tool"></i>
-                    <span class="sidebar-caption group-hover:scale-100">
-                        Issuing
-                    </span>
-                </div>
-                <div class="sidebar-icon group">
-                    <i data-feather="radio"></i>
-                    <span class="sidebar-caption group-hover:scale-100">
-                        Announce
-                    </span>
-                </div>
-                <div class="sidebar-icon group">
-                    <i data-feather="user-x"></i>
-                    <span class="sidebar-caption group-hover:scale-100">
-                        Away
-                    </span>
-                </div>
-                <hr class="sidebar-hr" />
-                <div class="sidebar-icon group">
-                    <i data-feather="inbox"></i>
-                    <span class="sidebar-caption group-hover:scale-100">
-                        Recipient
-                    </span>
-                </div>
-            </div>
-
         </div>
+    </div>
+
+    <div class="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-white dark:bg-gray-900 text-white shadow-lg">
+        <div class="sidebar-icon group current-status">
+            <i data-feather="user-check"></i>
+        </div>
+        <hr class="sidebar-hr" />
+        <div class="sidebar-icon group">
+            <i data-feather="user-check"></i>
+            <span class="sidebar-caption group-hover:scale-100">
+                Available
+            </span>
+        </div>
+        <div class="sidebar-icon group">
+            <i data-feather="phone-call"></i>
+            <span class="sidebar-caption group-hover:scale-100">
+                Next up
+            </span>
+        </div>
+        <div class="sidebar-icon group">
+            <i data-feather="headphones"></i>
+            <span class="sidebar-caption group-hover:scale-100">
+                On call
+            </span>
+        </div>
+        <div class="sidebar-icon group">
+            <i data-feather="pen-tool"></i>
+            <span class="sidebar-caption group-hover:scale-100">
+                Issuing
+            </span>
+        </div>
+        <div class="sidebar-icon group">
+            <i data-feather="radio"></i>
+            <span class="sidebar-caption group-hover:scale-100">
+                Announce
+            </span>
+        </div>
+        <div class="sidebar-icon group">
+            <i data-feather="user-x"></i>
+            <span class="sidebar-caption group-hover:scale-100">
+                Away
+            </span>
+        </div>
+        <hr class="sidebar-hr" />
+        <div class="sidebar-icon group">
+            <i data-feather="inbox"></i>
+            <span class="sidebar-caption group-hover:scale-100">
+                Recipient
+            </span>
+        </div>
+    </div>
+    </div>
 
 </body>
 <script>
     feather.replace()
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+
+    // Whenever the user explicitly chooses light mode
+    localStorage.theme = 'light'
+
+    // Whenever the user explicitly chooses dark mode
+    localStorage.theme = 'dark'
+
+    // Whenever the user explicitly chooses to respect the OS preference
+    localStorage.removeItem('theme')
 </script>
 
 </html>
