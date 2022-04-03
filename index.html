@@ -14,31 +14,52 @@
 <body>
     <div class="flex">
         <div class="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-gray-800 text-white shadow-lg">
-            <div class="sidebar-icon">
+            <div class="sidebar-icon group current-status">
                 <i data-feather="user-check"></i>
             </div>
             <hr class="sidebar-hr" />
-            <div class="sidebar-icon">
+            <div class="sidebar-icon group">
                 <i data-feather="user-check"></i>
+                <span class="sidebar-caption group-hover:scale-100">
+                    Available
+                </span>
             </div>
-            <div class="sidebar-icon">
+            <div class="sidebar-icon group">
                 <i data-feather="phone-call"></i>
+                <span class="sidebar-caption group-hover:scale-100">
+                    Next up
+                </span>
             </div>
-            <div class="sidebar-icon">
+            <div class="sidebar-icon group">
                 <i data-feather="headphones"></i>
+                <span class="sidebar-caption group-hover:scale-100">
+                    On call
+                </span>
             </div>
-            <div class="sidebar-icon">
+            <div class="sidebar-icon group">
                 <i data-feather="pen-tool"></i>
+                <span class="sidebar-caption group-hover:scale-100">
+                    Issuing
+                </span>
             </div>
-            <div class="sidebar-icon">
+            <div class="sidebar-icon group">
                 <i data-feather="radio"></i>
+                <span class="sidebar-caption group-hover:scale-100">
+                    Announce
+                </span>
             </div>
-            <div class="sidebar-icon">
+            <div class="sidebar-icon group">
                 <i data-feather="user-x"></i>
+                <span class="sidebar-caption group-hover:scale-100">
+                    Away
+                </span>
             </div>
             <hr class="sidebar-hr" />
-            <div class="sidebar-icon">
+            <div class="sidebar-icon group">
                 <i data-feather="inbox"></i>
+                <span class="sidebar-caption group-hover:scale-100">
+                    Recipient
+                </span>
             </div>
         </div>
 
@@ -48,4 +69,5 @@
 <script>
     feather.replace()
 </script>
+
 </html>
