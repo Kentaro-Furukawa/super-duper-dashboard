@@ -66,19 +66,56 @@
   }
 
   .main-content {
-    @apply pt-2 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100;
+    @apply pt-4 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100;
   }
 
   .target-content {
-    @apply m-2;
+    @apply mb-4;
   }
 
+  .target-content-first {
+    @apply flex flex-row justify-center mb-4;
+  }
 
+  .target-input input {
+    @apply w-56 h-10 mr-2 border border-gray-400 dark:border-gray-50 bg-gray-200 dark:bg-gray-700 bg-opacity-90 rounded-md shadow-sm indent-3;
+  }
 
+  .target-send {
+    @apply mr-4;
+  }
 
+  .target-send button {
+    @apply w-full h-10 px-7 bg-purple-400 dark:bg-purple-500 text-gray-100 dark:text-gray-200 rounded-md shadow-md;
+  }
 
+  .target-clear button {
+    @apply w-full h-10 px-3 bg-gray-400 dark:bg-gray-500 text-gray-100 dark:text-gray-200 rounded-md shadow-md;
+  }
 
+  .target-content-second {
+    @apply flex flex-row justify-center;
+  }
 
+  .target-tag {
+    @apply mr-2;
+  }
+
+  .target-tag button {
+    @apply w-full h-10 px-7 bg-orange-400 dark:bg-orange-500 text-gray-100 dark:text-gray-200 rounded-md shadow-md;
+  }
+
+  .target-external-link {
+    @apply mr-2;
+  }
+
+  .target-external-link button {
+    @apply w-full h-10 px-7 bg-blue-400 dark:bg-blue-500 text-gray-100 dark:text-gray-200 rounded-md shadow-md;
+  }
+
+  .target-check button {
+    @apply w-full h-10 px-7 bg-yellow-400 dark:bg-yellow-500 text-gray-100 dark:text-gray-200 rounded-md shadow-md;
+  }
 
 
 }
