@@ -35,20 +35,26 @@
   }
 
   .refresh-button {
-    @apply block h-10 w-20 py-2 text-center justify-center bg-gray-600 dark:bg-gray-800 rounded-md text-white focus:outline-none
+    @apply bg-gray-600 dark:bg-gray-800 rounded-md text-white
+  }
+  .refresh-button button {
+    @apply h-10 w-full px-10
   }
 
   .theme-toggle-button {
-    @apply block h-10 w-10 py-2 text-center justify-center bg-gray-600 dark:bg-gray-800 rounded-md text-white focus:outline-none
+    @apply bg-gray-600 dark:bg-gray-800 rounded-md text-white
+  }
+  .theme-toggle-button button {
+    @apply h-10 w-full px-3
   }
 
   .topbar-divider {
-    @apply block w-[1.5px] h-10 mx-3 bg-gray-800 rounded-full;
+    @apply block w-[1.5px] h-10 mx-3 bg-gray-400 dark:bg-gray-800 rounded-full;
   }
 
 
 
-
+ 
 
 
 
