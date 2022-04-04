@@ -5,7 +5,7 @@
 @layer components {
 
   .content-container {
-    @apply flex flex-col 
+    @apply flex flex-col
     bg-gray-300 dark:bg-gray-700
     ml-16 mr-0 my-0
     h-full w-full 
@@ -13,12 +13,45 @@
   }
 
   .top-navigation {
-    @apply flex flex-row items-center justify-evenly 
+    @apply flex flex-row items-center justify-between
     bg-gray-300 dark:bg-gray-700 bg-opacity-90 
     w-full h-16 
     m-0 
     shadow-lg;
   }
+
+  .user-select {
+    @apply bg-gray-300 dark:bg-gray-700 bg-opacity-90 
+    w-56 h-16 py-3 pl-3
+    m-0
+  }
+
+  .user-select select {
+    @apply w-full h-10  bg-gray-100 dark:bg-gray-300 rounded-md
+  }
+
+  .top-navigation-icons {
+    @apply flex py-3 pr-3 h-16 m-0
+  }
+
+  .refresh-button {
+    @apply block h-10 w-20 py-2 text-center justify-center bg-gray-600 dark:bg-gray-800 rounded-md text-white focus:outline-none
+  }
+
+  .theme-toggle-button {
+    @apply block h-10 w-10 py-2 text-center justify-center bg-gray-600 dark:bg-gray-800 rounded-md text-white focus:outline-none
+  }
+
+  .topbar-divider {
+    @apply block w-[1.5px] h-10 mx-3 bg-gray-800 rounded-full;
+  }
+
+
+
+
+
+
+
 
 
     .sidebar-icon {

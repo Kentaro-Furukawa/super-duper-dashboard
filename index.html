@@ -13,25 +13,64 @@
 
 <body>
     <div class="flex">
-        <div class="content-container">
-            <div class="top-navigation">
+        <div x-data="{ user: '' }" class="content-container">
+            <section class="top-navigation">
 
-                <button x-data="{
-                    toggle: () => {
-                        if (localStorage.theme === 'dark') {
-                            localStorage.theme = 'light';
-                            document.documentElement.classList.remove('dark');
-                        } else {
-                            localStorage.theme = 'dark';
-                            document.documentElement.classList.add('dark');
-                        }
-                    },
-                }" class="mt-2 px-3 py-2 bg-pink-400 rounded-lg font-semibold text-white focus:outline-none"
-                    @click="toggle">
-                    <i data-feather="moon"></i>
-                </button>
-            </div>
+                <div class="user-select">
+                    <select x-model="user">
+                        <option value="" disabled>Select user...</option>
+                        <option>Ken</option>
+                        <option>John</option>
+                        <option>Evan</option>
+                        <option>Tim</option>
+                        <option>Ryu Murakami</option>
+                        <option>柳生 石舟斎</option>
+                        <option>村上 龍</option>
+                        <option>平賀 源内</option>
+                        <option>秋田屋九五郎</option>
+                    </select>
+                </div>
+
+                <div class="top-navigation-icons">
+
+
+                    <div class="refresh-button">
+                        <button>
+                            <i data-feather="rotate-cw"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="topbar-divider"></div>
+
+                    <div class="theme-toggle-button">
+                        <button x-data="{
+                        toggle: () => {
+                            if (localStorage.theme === 'dark') {
+                                localStorage.theme = 'light';
+                                document.documentElement.classList.remove('dark');
+                            } else {
+                                localStorage.theme = 'dark';
+                                document.documentElement.classList.add('dark');
+                            }
+                        },
+                    }"
+                            @click="toggle">
+                            <i data-feather="moon"></i>
+                        </button>
+
+                    </div>
+
+                    </div>
+            </section>
+
+            <section class="main-content">
+                user: <span x-text="user"></span>
+            </section>
+
         </div>
+
+
     </div>
 
     <div class="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-white dark:bg-gray-900 text-white shadow-lg">
@@ -87,4 +126,5 @@
 
 </body>
 <script src="./scripts/main.js"></script>
+
 </html>
