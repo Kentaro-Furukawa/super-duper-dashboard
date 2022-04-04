@@ -4,30 +4,41 @@
 
 @layer components {
 
+  .content-wrapper {
+    @apply flex bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100;
+  }
+
+  .sidebar-icon {
+    @apply relative flex items-center justify-center h-12 w-12 my-3 mx-auto shadow-lg bg-gray-200 dark:bg-gray-700 text-green-600 dark:text-green-300 hover:bg-green-600 hover:text-white rounded-3xl hover:rounded-xl transition-all duration-100 ease-linear;
+  }
+
+  .current-state-icon {
+    @apply relative flex items-center justify-center h-10 w-10 my-3 mx-auto shadow-lg bg-green-600 text-white rounded-xl;
+  }
+
+  .sidebar-caption {
+    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-left;
+  }
+
+  .sidebar-hr {
+    @apply bg-gray-400 border border-gray-100 dark:border-gray-800 rounded-full mx-2 my-3;
+  }
+
+
   .content-container {
-    @apply flex flex-col
-    bg-gray-300 dark:bg-gray-700
-    ml-16 mr-0 my-0
-    h-full w-full 
-    overflow-hidden;
+    @apply flex flex-col bg-gray-300 dark:bg-gray-700 ml-16 mr-0 my-0 h-full w-full overflow-hidden;
   }
 
   .top-navigation {
-    @apply flex flex-row items-center justify-between
-    bg-gray-300 dark:bg-gray-700 bg-opacity-90 
-    w-full h-16 
-    m-0 
-    shadow-lg;
+    @apply flex flex-row items-center justify-between bg-gray-300 dark:bg-gray-700 bg-opacity-90 w-full h-16 m-0 shadow-lg;
   }
 
   .user-select {
-    @apply bg-gray-300 dark:bg-gray-700 bg-opacity-90 
-    w-56 h-16 py-3 pl-3
-    m-0
+    @apply bg-gray-300 dark:bg-gray-700 bg-opacity-90 w-56 h-16 py-3 pl-3 m-0
   }
 
   .user-select select {
-    @apply w-full h-10  bg-gray-100 dark:bg-gray-300 rounded-md
+    @apply w-full h-10 bg-gray-100 dark:bg-gray-300 rounded-md
   }
 
   .top-navigation-icons {
@@ -37,6 +48,7 @@
   .refresh-button {
     @apply bg-gray-600 dark:bg-gray-800 rounded-md text-white
   }
+
   .refresh-button button {
     @apply h-10 w-full px-10
   }
@@ -44,6 +56,7 @@
   .theme-toggle-button {
     @apply bg-gray-600 dark:bg-gray-800 rounded-md text-white
   }
+
   .theme-toggle-button button {
     @apply h-10 w-full px-3
   }
@@ -52,36 +65,20 @@
     @apply block w-[1.5px] h-10 mx-3 bg-gray-400 dark:bg-gray-800 rounded-full;
   }
 
+  .main-content {
+    @apply pt-2 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100;
+  }
+
+  .checker-content {
+    @apply m-2;
+  }
 
 
- 
 
 
 
 
 
-    .sidebar-icon {
-        @apply relative flex items-center justify-center h-12 w-12 my-3 mx-auto shadow-lg bg-gray-200 dark:bg-gray-700
-        text-green-600 dark:text-green-300
-        hover:bg-green-600 hover:text-white rounded-3xl hover:rounded-xl transition-all duration-100 ease-linear;
-    }
-    .current-state-icon {
-      @apply relative flex items-center justify-center h-12 w-12 my-3 mx-auto shadow-lg
-      bg-green-600 text-white rounded-xl;
-    }
 
-    .sidebar-caption {
-        @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md
-        text-white bg-gray-900 
-        text-xs font-bold 
-        transition-all duration-100 scale-0 origin-left;
-      }
-    
-      .sidebar-hr {
-        @apply bg-gray-400 
-        border border-gray-100 dark:border-gray-800 rounded-full
-        mx-2 my-3;
-      }
 
-    
 }

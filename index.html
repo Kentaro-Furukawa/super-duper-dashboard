@@ -27,22 +27,17 @@
                         <option>柳生 石舟斎</option>
                         <option>村上 龍</option>
                         <option>平賀 源内</option>
-                        <option>秋田 屋九五郎</option>
+                        <option>秋田屋 九五郎</option>
                     </select>
                 </div>
 
                 <div class="top-navigation-icons">
-
-
                     <div class="refresh-button">
                         <button>
                             <i data-feather="rotate-cw"></i>
                         </button>
-
                     </div>
-
                     <div class="topbar-divider"></div>
-
                     <div class="theme-toggle-button">
                         <button x-data="{
                         toggle: () => {
@@ -54,18 +49,22 @@
                                 document.documentElement.classList.add('dark');
                             }
                         },
-                    }"
-                            @click="toggle">
+                    }" @click="toggle">
                             <i data-feather="moon"></i>
                         </button>
-
                     </div>
-
-                    </div>
+                </div>
             </section>
 
             <section class="main-content">
-                user: <span x-text="user"></span>
+                <section class="checker-content">
+                    <form x-on:submit.prevent>
+                        <input type="text" placeholder="Enter here...">
+                        <button>
+                            <i data-feather="send"></i>
+                        </button>
+                    </form>
+                </section>
             </section>
 
         </div>
