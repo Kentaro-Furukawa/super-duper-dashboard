@@ -4,8 +4,12 @@
 
 @layer components {
 
-  .content-wrapper {
-    @apply flex bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100;
+  .content-container {
+    @apply flex flex-col  bg-gray-200 dark:bg-gray-700 ml-16 mr-0 my-0 w-full h-screen;
+  }
+
+  .sidebar-container {
+    @apply fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-white dark:bg-gray-900 text-white shadow-lg;
   }
 
   .sidebar-icon {
@@ -24,10 +28,6 @@
     @apply bg-gray-400 border border-gray-100 dark:border-gray-800 rounded-full mx-2 my-3;
   }
 
-
-  .content-container {
-    @apply flex flex-col bg-gray-300 dark:bg-gray-700 ml-16 mr-0 my-0 h-full w-full overflow-hidden;
-  }
 
   .top-navigation {
     @apply flex flex-row items-center justify-between bg-gray-300 dark:bg-gray-700 bg-opacity-90 w-full h-16 m-0 shadow-lg;
@@ -116,6 +116,48 @@
   .target-check button {
     @apply w-full h-10 px-7 bg-yellow-400 dark:bg-yellow-500 text-gray-100 dark:text-gray-200 rounded-md shadow-md;
   }
+ 
+  .table-container {
+    @apply p-4 h-full bg-gray-200 dark:bg-gray-700;
+  }
+
+  .table-container table {
+    @apply w-full border-collapse border border-gray-400 bg-gray-50 dark:bg-gray-600; 
+  }
+
+  .table-container table th {
+    @apply text-center border border-gray-400 py-2 bg-gray-100 dark:bg-gray-700 rounded-md;
+  }
+
+  .ht-key {
+    @apply w-2/5;
+  }
+
+  .ht-time {
+    @apply w-1/5;
+  }
+
+  .ht-value {
+    @apply w-2/5;
+  }
+
+
+  .table-container table td {
+    @apply border border-gray-400 py-1 rounded-md;
+  }
+
+  .td-key {
+    @apply indent-3 text-left;
+  }
+
+  .td-time {
+    @apply text-center;
+  }
+
+  .td-value {
+    @apply indent-3 text-left;
+  }
+
 
 
 }
