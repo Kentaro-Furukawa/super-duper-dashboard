@@ -46,7 +46,7 @@
   }
 
   .refresh-button {
-    @apply bg-gray-600 dark:bg-gray-800 rounded-md text-white
+    @apply bg-gray-500 dark:bg-gray-800 rounded-md text-white
   }
 
   .refresh-button button {
@@ -54,7 +54,7 @@
   }
 
   .theme-toggle-button {
-    @apply bg-gray-600 dark:bg-gray-800 rounded-md text-white
+    @apply bg-gray-400 dark:bg-gray-600 rounded-md text-white
   }
 
   .theme-toggle-button button {
