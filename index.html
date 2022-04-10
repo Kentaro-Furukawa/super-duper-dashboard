@@ -17,17 +17,17 @@
             <section class="top-navigation">
 
                 <div class="user-select">
-                    <select x-model="user">
+                    <select id="user-selecter" x-model="user">
                         <option value="" disabled>Select user...</option>
-                        <option>Ken</option>
-                        <option>John</option>
-                        <option>Evan</option>
-                        <option>Tim</option>
-                        <option>Ryu Murakami</option>
-                        <option>柳生 石舟斎</option>
-                        <option>村上 龍</option>
-                        <option>平賀 源内</option>
-                        <option>秋田屋 九五郎</option>
+                        <option value="Ken" >Ken</option>
+                        <option value="John" >John</option>
+                        <option value="Evan" >Evan</option>
+                        <option value="Tim" >Tim</option>
+                        <option value="Ryu" >Ryu Murakami</option>
+                        <option value="柳生 石舟斎" >柳生 石舟斎</option>
+                        <option value="村上 龍" >村上 龍</option>
+                        <option value="平賀 源内" >平賀 源内</option>
+                        <option value="秋田屋 九五郎" >秋田屋 九五郎</option>
                     </select>
                 </div>
 
@@ -74,7 +74,6 @@
                                 </button>
                             </div>
                         </div>
-
                         <div class="target-content-second">
                             <div class="target-tag">
                                 <button>
@@ -92,43 +91,19 @@
                                 </button>
                             </div>
                         </div>
+                        <div class="msg"></div>
                     </form>
                 </section>
                 <section class="table-container">
                     <table>
                         <tr>
-                            <th class="ht-key">Key</th>
-                            <th class="ht-time">Time</th>
-                            <th class="ht-Value">Value</th>
+                            <th class="th-key">Key</th>
+                            <th class="th-time">Time</th>
+                            <th class="th-Value">Value</th>
                         </tr>
                         <tr>
                             <td class="td-key">Alfreds Futterkiste</td>
                             <td class="td-time">09:21:20</td>
-                            <td class="td-value">INC1234568</td>
-                        </tr>
-                        <tr>
-                            <td class="td-key">Centro Moctezuma</td>
-                            <td class="td-time">09:18:45</td>
-                            <td class="td-value">INC1234568</td>
-                        </tr>
-                        <tr>
-                            <td class="td-key">Alfreds Futterkiste</td>
-                            <td class="td-time">09:21:20</td>
-                            <td class="td-value">INC1234568</td>
-                        </tr>
-                        <tr>
-                            <td class="td-key">Centro Moctezuma</td>
-                            <td class="td-time">09:18:45</td>
-                            <td class="td-value">INC1234568</td>
-                        </tr>
-                        <tr>
-                            <td class="td-key">Alfreds Futterkiste</td>
-                            <td class="td-time">09:21:20</td>
-                            <td class="td-value">INC1234568</td>
-                        </tr>
-                        <tr>
-                            <td class="td-key">Centro Moctezuma</td>
-                            <td class="td-time">09:18:45</td>
                             <td class="td-value">INC1234568</td>
                         </tr>
                     </table>

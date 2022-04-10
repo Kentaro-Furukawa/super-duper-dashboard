@@ -73,6 +73,14 @@
     @apply mb-4;
   }
 
+  .msg {
+    @apply text-center bg-red-400;
+  }
+
+  .msg-on {
+    @apply my-3 py-3;
+  }
+
   .target-content-first {
     @apply flex flex-row justify-center mb-4;
   }
@@ -129,15 +137,15 @@
     @apply text-center border border-gray-400 py-2 bg-gray-100 dark:bg-gray-700 rounded-md;
   }
 
-  .ht-key {
+  .th-key {
     @apply w-2/5;
   }
 
-  .ht-time {
+  .th-time {
     @apply w-1/5;
   }
 
-  .ht-value {
+  .th-value {
     @apply w-2/5;
   }
 
