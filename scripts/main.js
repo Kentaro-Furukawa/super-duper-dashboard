@@ -27,7 +27,7 @@ const stateTable = document.querySelector('.table-container table');
 sendButton.addEventListener('click', clickSend);
 
 
-function clickSend(e){
+function clickSend(e) {
     e.preventDefault();
 
     const current = new Date();
@@ -39,11 +39,15 @@ function clickSend(e){
     currentSeconds = ("0" + currentSeconds).slice(-2);
 
     const currentTime = `${currentHours}:${currentMinutes}:${currentSeconds}`;
-    
+
     if (targetInput.value.trim() === '' || selectedUser.value === '') {
         msg.classList.add('msg-on');
         msg.innerHTML = 'Please Enter value and select user.';
-        setTimeout(() => msg.remove(), 3000);
+        setTimeout(() => {
+            msg.classList.remove('msg-on');
+            msg.innerHTML = '';
+        }
+            , 3000);
     } else {
         const tr = document.createElement('tr');
         tr.innerHTML = `<td class="td-key">${selectedUser.value}</td><td class="td-time">${currentTime}</td><td class="td-value">${targetInput.value}</td>`;
