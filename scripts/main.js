@@ -26,10 +26,19 @@ const stateTable = document.querySelector('.table-container table');
 
 sendButton.addEventListener('click', clickSend);
 
+
 function clickSend(e){
     e.preventDefault();
+
     const current = new Date();
-    const currentTime = `${current.getHours()}:${current.getMinutes()}:${current.getSeconds()}`;
+    currentHours = current.getHours();
+    currentHours = ("0" + currentHours).slice(-2);
+    currentMinutes = current.getMinutes();
+    currentMinutes = ("0" + currentMinutes).slice(-2);
+    currentSeconds = current.getSeconds();
+    currentSeconds = ("0" + currentSeconds).slice(-2);
+
+    const currentTime = `${currentHours}:${currentMinutes}:${currentSeconds}`;
     
     if (targetInput.value.trim() === '' || selectedUser.value === '') {
         msg.classList.add('msg-on');
