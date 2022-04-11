@@ -48,6 +48,8 @@ function clickSend(e){
         const tr = document.createElement('tr');
         tr.innerHTML = `<td class="td-key">${selectedUser.value}</td><td class="td-time">${currentTime}</td><td class="td-value">${targetInput.value}</td>`;
         stateTable.appendChild(tr);
+        targetInput.value = '';
+        targetInput.innerHTML = '';
     }
 
 }
