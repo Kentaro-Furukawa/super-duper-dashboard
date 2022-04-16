@@ -31,13 +31,10 @@ function clickSend(e) {
     e.preventDefault();
 
     const current = new Date();
-    currentHours = current.getHours();
-    currentHours = ("0" + currentHours).slice(-2);
-    currentMinutes = current.getMinutes();
-    currentMinutes = ("0" + currentMinutes).slice(-2);
-    currentSeconds = current.getSeconds();
-    currentSeconds = ("0" + currentSeconds).slice(-2);
-
+    currentHours = ('0' + current.getHours()).slice(-2);
+    currentMinutes = ('0' + current.getMinutes()).slice(-2);
+    currentSeconds = ('0' + current.getSeconds()).slice(-2);
+    
     const currentTime = `${currentHours}:${currentMinutes}:${currentSeconds}`;
 
     if (targetInput.value.trim() === '' || selectedUser.value === '') {
